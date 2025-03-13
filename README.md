@@ -39,5 +39,4 @@ To exit just type 'exit' and press enter or press Ctrl+C.
 
 Query model:
 ```
-
-#### 7. Query away! To exit just type `exit` and press enter or press `Ctrl`+`C`.
+Query away! To exit just type `exit` and press enter or press `Ctrl`+`C`.
