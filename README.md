@@ -1,6 +1,6 @@
 # OpenAI API Example
 
-This is a simple example of how to use the OpenAI API to query a model.
+This is a simple example demonstrating how to use the OpenAI API to query a model.
 
 > [!NOTE]
 > **These instructions are for unix-based systems (i.e. MacOS, Linux). Before you proceed, make sure that you have installed `python` and `pip`. If you have not, follow [these](https://packaging.python.org/en/latest/tutorials/installing-packages/) instructions to do so.**
@@ -27,9 +27,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-####    6. Run the script:
+#### 6. Run the script:
 ```
-python model.py
+python3 model.py
+```
+Expected output:
+```
+Connecting to model...
+
+To exit just type 'exit' and press enter or press Ctrl+C.
+
+Query model:
 ```
 
-#### 7. Query away! To exit just type `exit` and press enter or press `Ctrl`+`C`.`
+#### 7. Query away! To exit just type `exit` and press enter or press `Ctrl`+`C`.
