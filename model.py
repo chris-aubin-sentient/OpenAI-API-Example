@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from datetime import datetime
 from langchain_core.prompts import PromptTemplate
 
+
 class Model:
     def __init__(self, api_key):
         """ Initializes model, sets up OpenAI client, configures system prompt."""
@@ -70,24 +71,25 @@ if __name__ == "__main__":
         print("Connecting to model...")
         print()
         
+        # Initialize model
         load_dotenv()
         api_key=os.getenv("MODEL_API_KEY", None)
         if not api_key:
             raise Exception("Please add your model provider api key to the .env file.")
-
-        model = Model(
-            api_key=os.getenv("MODEL_API_KEY", None)
-        )
+        model = Model(api_key=api_key)
 
         print("To exit just type 'exit' and press enter or press Ctrl+C.")
         print()
 
+        # Query model
         while True:
             query = input("Query model: ")
+
             if query == "exit":
                 print()
                 print("Disconnecting from model...")
                 break
+            
             print("Model response: ", end="", flush=True)
             for chunk in model.query_stream(query):
                 print(chunk, end="", flush=True)
